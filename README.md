@@ -3,44 +3,44 @@ Optimized MeshCore firmware for Heltec V3/V4, engineered for low power consumpti
 
 Up to date with MeshCore dev branch, last update is 1/10/2026.
 
-## *Typical power profile of Heltec V3 BLE companion, 7 LoRa messages in 30 seconds:*
-* Maximum: 274.89 mA
-* Minimum: 6.18 mA
-* Mean: 34.85 mA
+## *Typical power profile of Heltec V3 BLE companion, 5 LoRa messages in 30 seconds:*
+* Maximum: 259 mA
+* Minimum: 7.9 mA
+* Mean: 34.55 mA
 
-**Estimated ~57.39 h (2.39 days) with 2000mAh battery.**
+**Estimated ~57.89 h (2.41 days) with 2000mAh battery.**
 
-<img width="1280" height="348" alt="V3_BLE_dev_0111" src="https://github.com/user-attachments/assets/6b04f63e-3ee7-49d8-a254-0b5e7531b197" />
+<img width="1279" height="348" alt="companion-8080-high-traffic" src="https://github.com/user-attachments/assets/51354bcd-b056-41ff-890c-284dd8718715" />
 
 
 ## *Typical power profile of Heltec V3 BLE companion in idle:*
-* Maximum: 127.28 mA
-* Minimum: 6.74 mA
-* Mean: 23.50 mA
+* Maximum: 116.77 mA
+* Minimum: 8.65 mA
+* Mean: 22.88 mA
 
-**Estimated ~85.11 h (3.55 days) with 2000mAh battery.**
+**Estimated ~87.41 h (3.64 days) with 2000mAh battery.**
 
-<img width="1280" height="348" alt="V3_BLE_dev_idle_0111" src="https://github.com/user-attachments/assets/18efa14d-fd48-4b60-8c5e-e844732af511" />
+<img width="1279" height="348" alt="companion-8080-idle" src="https://github.com/user-attachments/assets/394bf183-09f7-45c7-b8a3-d891cc066e65" />
 
 
 ## *Typical power profile of Heltec V3 repeater in high LoRa traffic, 6 LoRa messages in 30 seconds*:
-* Maximum: 124.7 mA
-* Minimum: 6.64 mA
-* Mean: 22.67 mA
+* Maximum: 126.35 mA
+* Minimum: 5.2 mA
+* Mean: 24.7 mA
   
-**Estimated ~88.22 h (3.68 days) with 2000mAh battery.**
+**Estimated ~80.97 h (3.37 days) with 2000mAh battery.**
 
-<img width="1279" height="348" alt="V3_repeater_high_lora_traffic_0111" src="https://github.com/user-attachments/assets/de824957-d6f5-4c41-8f3b-e621231195ea" />
+<img width="1279" height="348" alt="repeater-high-traffic" src="https://github.com/user-attachments/assets/cf92d506-c6cd-4374-ba21-be55a31a3a9e" />
 
 
 ## *Typical power profile of Heltec V3 repeater in idle:*
-* Maximum: 43.82 mA
-* Minimum: 7.31 mA
-* Mean: 10.12 mA
+* Maximum: 39.08 mA
+* Minimum: 8.6 mA
+* Mean: 10.38 mA
   
-**Estimated ~197.68 h (8.24 days) with 2000mAh battery.**
+**Estimated ~192.68 h (8.03 days) with 2000mAh battery.**
 
-<img width="1279" height="348" alt="V3_repeater_dev_idle_0111" src="https://github.com/user-attachments/assets/6ce903c2-ea9f-4a15-b963-f88b630e0af8" />
+<img width="1279" height="348" alt="repeater-idle" src="https://github.com/user-attachments/assets/6ee80eae-3ed3-4805-8421-97d6c1a852e7" />
 
 
 ## Note: 
