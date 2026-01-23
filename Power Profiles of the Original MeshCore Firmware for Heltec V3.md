@@ -1,3 +1,5 @@
+**_2026-01-23 updated, readings of LoRa Tx current were incorrect due to antenna impedance mismatch (using a short spring antenna)._** 
+
 # Power Profiles of the Original MeshCore Firmware for Heltec V3 (1.11.dev)
 
 ## Heltec V3 BLE companion, 5 LoRa messages in 30 seconds
