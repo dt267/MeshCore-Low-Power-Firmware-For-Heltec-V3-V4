@@ -2,47 +2,47 @@
 Optimized MeshCore firmware for Heltec V3/V4, engineered for low power consumption and extended battery life in off-grid scenarios.
 
 ## *Typical power profile of Heltec V3 BLE companion, 5 LoRa messages in 30 seconds:*
-* Maximum: 259 mA
-* Minimum: 7.9 mA
-* Mean: 34.55 mA
+* Maximum: 246.3 mA
+* Minimum: 7.2 mA
+* Mean: 37.84 mA
 
-**Estimated ~57.89 h (2.41 days) with 2000mAh battery.**
+**Estimated ~47.5 h (2 days) with 2000mAh battery.**
 
-<img width="1279" height="348" alt="companion-8080-high-traffic" src="https://github.com/user-attachments/assets/51354bcd-b056-41ff-890c-284dd8718715" />
+<img width="1277" height="348" alt="companion-high-lora" src="https://github.com/user-attachments/assets/0b027ad4-7dfe-4d08-a4e0-e1a65cd2aaea" />
 
 
 ## *Typical power profile of Heltec V3 BLE companion in idle:*
-* Maximum: 116.77 mA
-* Minimum: 8.65 mA
-* Mean: 22.88 mA
+* Maximum: 115.9 mA
+* Minimum: 7.7 mA
+* Mean: 21.82 mA
 
-**Estimated ~87.41 h (3.64 days) with 2000mAh battery.**
+**Estimated ~82.5 h (3.44 days) with 2000mAh battery.**
 
-<img width="1279" height="348" alt="companion-8080-idle" src="https://github.com/user-attachments/assets/394bf183-09f7-45c7-b8a3-d891cc066e65" />
+<img width="1277" height="348" alt="companion-idle" src="https://github.com/user-attachments/assets/20059c62-a493-4a4f-86d0-9e63a954ddcf" />
 
 
 ## *Typical power profile of Heltec V3 repeater in high LoRa traffic, 6 LoRa messages in 30 seconds*:
-* Maximum: 126.35 mA
-* Minimum: 5.2 mA
-* Mean: 24.7 mA
+* Maximum: 163.8 mA
+* Minimum: 4.1 mA
+* Mean: 28.60 mA
   
-**Estimated ~80.97 h (3.37 days) with 2000mAh battery.**
+**Estimated ~62.9 h (2.62 days) with 2000mAh battery.**
 
-<img width="1279" height="348" alt="repeater-high-traffic" src="https://github.com/user-attachments/assets/cf92d506-c6cd-4374-ba21-be55a31a3a9e" />
+<img width="1277" height="348" alt="repeater-high-lora" src="https://github.com/user-attachments/assets/d69a26c6-7d97-4162-9823-566d3ed78168" />
 
 
 ## *Typical power profile of Heltec V3 repeater in idle:*
-* Maximum: 39.08 mA
-* Minimum: 8.6 mA
-* Mean: 10.38 mA
+* Maximum: 35.5 mA
+* Minimum: 5.2 mA
+* Mean: 7.27 mA
   
-**Estimated ~192.68 h (8.03 days) with 2000mAh battery.**
+**Estimated ~247.6 h (10.32 days) with 2000mAh battery.**
 
-<img width="1279" height="348" alt="repeater-idle" src="https://github.com/user-attachments/assets/6ee80eae-3ed3-4805-8421-97d6c1a852e7" />
+<img width="1277" height="348" alt="repeater-idle" src="https://github.com/user-attachments/assets/9ec41771-8727-4072-ac7b-656502002254" />
 
 
 ## Note: 
-- Updated to MeshCore dev branch 2026-01-16.
+- Updated to MeshCore dev branch 2026-01-23.
 - Improved battery measurement and management.
 - Serial port will be deactivated after 30 seconds idle.
 - ***No clock drifted problem on repeater and room server firmware.***
