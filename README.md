@@ -6,7 +6,7 @@ Optimized MeshCore firmware for Heltec V3/V4, engineered for low power consumpti
 * Minimum: 7.2 mA
 * Mean: 37.84 mA
 
-**Estimated ~47.5 h (2 days) with 2000mAh battery.**
+**Estimated ~44.93 h (1.87 days) with 2000mAh battery.**
 
 <img width="1277" height="348" alt="companion-high-lora" src="https://github.com/user-attachments/assets/0b027ad4-7dfe-4d08-a4e0-e1a65cd2aaea" />
 
@@ -16,7 +16,7 @@ Optimized MeshCore firmware for Heltec V3/V4, engineered for low power consumpti
 * Minimum: 7.7 mA
 * Mean: 21.82 mA
 
-**Estimated ~82.5 h (3.44 days) with 2000mAh battery.**
+**Estimated ~77.91 h (3.25 days) with 2000mAh battery.**
 
 <img width="1277" height="348" alt="companion-idle" src="https://github.com/user-attachments/assets/20059c62-a493-4a4f-86d0-9e63a954ddcf" />
 
@@ -26,7 +26,7 @@ Optimized MeshCore firmware for Heltec V3/V4, engineered for low power consumpti
 * Minimum: 4.1 mA
 * Mean: 28.60 mA
   
-**Estimated ~62.9 h (2.62 days) with 2000mAh battery.**
+**Estimated ~59.44 h (2.48 days) with 2000mAh battery.**
 
 <img width="1277" height="348" alt="repeater-high-lora" src="https://github.com/user-attachments/assets/d69a26c6-7d97-4162-9823-566d3ed78168" />
 
@@ -36,7 +36,7 @@ Optimized MeshCore firmware for Heltec V3/V4, engineered for low power consumpti
 * Minimum: 5.2 mA
 * Mean: 7.27 mA
   
-**Estimated ~247.6 h (10.32 days) with 2000mAh battery.**
+**Estimated ~233.84 h (9.74 days) with 2000mAh battery.**
 
 <img width="1277" height="348" alt="repeater-idle" src="https://github.com/user-attachments/assets/9ec41771-8727-4072-ac7b-656502002254" />
 
@@ -46,4 +46,6 @@ Optimized MeshCore firmware for Heltec V3/V4, engineered for low power consumpti
 - Improved battery measurement and management.
 - Serial port will be deactivated after 30 seconds idle.
 - ***No clock drifted problem on repeater and room server firmware.***
+- LoRa Tx is 22dBm at dummy load.
+- T_hours = 2000 * 0.85 / I_mean
 - [Power Profiles of the Original MeshCore Firmware for Heltec V3](https://github.com/dt267/MeshCore-Low-Power-Firmware-For-Heltec-V3-V4/blob/main/Power%20Profiles%20of%20the%20Original%20MeshCore%20Firmware%20for%20Heltec%20V3.md#power-profiles-of-the-original-meshcore-firmware-for-heltec-v3-111dev)
