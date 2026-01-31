@@ -1,5 +1,5 @@
 # MeshCore - Low power firmware for Heltec Lora 32 V3 & WSL3 (esp32s3)
-Optimized MeshCore firmware for Heltec V3/V4, engineered for low power consumption and extended battery life in off-grid scenarios.
+Optimized MeshCore firmware for Heltec V3 & WSL3, engineered for low power consumption and extended battery life in off-grid scenarios.
 
 ## *Typical power profile of Heltec V3 BLE companion, 5 LoRa messages in 30 seconds:*
 * Maximum: 246.3 mA
