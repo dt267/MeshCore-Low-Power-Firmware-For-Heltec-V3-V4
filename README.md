@@ -42,7 +42,7 @@ Optimized MeshCore firmware for Heltec V3/V4, engineered for low power consumpti
 
 
 ## Note: 
-- Updated to MeshCore dev branch 2026-01-31.
+- [Updated to MeshCore dev branch 2026-01-31](https://github.com/dt267/MeshCore-Low-Power-Firmware-For-Heltec-V3-V4/releases/tag/Heltec-V3-WSL3-low-power-v1.12_0131)
 - Improved battery measurement and management.
 - Serial port will be deactivated after 30 seconds idle.
 - ***No clock drifted problem on repeater and room server firmware.***
