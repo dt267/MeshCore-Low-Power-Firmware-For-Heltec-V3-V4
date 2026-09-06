@@ -30,6 +30,30 @@ MeshCore firmware with deep power optimization, a full companion display UI with
 
 ## What's New
 
+### v1.17_0906
+
+- **New: LR1121 radio health telemetry, with automatic image recalibration.** *(Companion, Repeater, Room Server — LR1121 boards)*
+
+  Supply voltage and die temperature are now surfaced as a "Radio" sensor channel — on the Companion Sensors screen and via **Request Telemetry**. The same reading also triggers an automatic image-rejection recalibration after a >10°C drift or a 10-20 MHz retune, per the datasheet — sub-GHz only, since the 2.4 GHz path doesn't support or need it.
+
+- **Changed: a large frequency change on `set radio` or `tempradio` no longer needs a reboot.** *(Companion, Repeater, Room Server — boards whose radio supports it)*
+
+  A move of 20 MHz or more — crossing sub-GHz bands, or between sub-GHz and 2.4 GHz — now applies on its own by re-initializing the radio in place. Previously this required a manual reboot.
+
+- **Improved: RX Duty Cycle reliability.** *(All roles — SX1262 and LR1121 boards, RX Duty Cycle on)*
+
+  General reliability work on the RX Duty Cycle path. Among it: the RSSI fast path from the hybrid channel-sensing feature (v1.15_0419) is no longer a fast path once RX Duty Cycle keeps the radio asleep most of the time, so it's skipped — with RX Duty Cycle on, `int.thresh > 0` now only activates CAD.
+
+- **New: Node Discovery on the Recent page.** *(Companion — boards with a display)*
+
+  Long pressing the Recent page (formerly "Recent Advert") now opens a two-item menu — **Send Zero Hop Advert** (the previous one-press action) and **Node Discovery**. Node Discovery probes for nearby repeaters and merges the answers into the same recently-heard list, showing SNR both ways instead of an age — your signal as the repeater heard it, then its signal as you heard it. A repeater that answers but isn't a saved contact shows its public key prefix instead of a name.
+
+  The **Send Advert** item is removed from Settings — Recent is now the only place to send one.
+
+- **Fix: `set radio`/`tempradio` now reject a bandwidth the radio chip can't actually use.** *(Companion, Repeater, Room Server — all boards)*
+
+  A bandwidth outside the radio's actual supported steps, typed manually via CLI, used to be accepted instead of rejected. Now checked against the exact steps the radio chip supports.
+
 ### v1.17_0830
 
 - **New device: Waveshare ESP32-S3-LR1121-XF — dual-band sub-GHz + 2.4 GHz.** *(Companion, Repeater, Room Server)*

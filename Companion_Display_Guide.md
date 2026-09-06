@@ -13,7 +13,7 @@ One button does everything:
 | **Single click** | Next page / next item / scroll down |
 | **Double click** | Previous page / exit sub-level |
 | **Triple click** | Previous item in most lists and sub-levels — falls back to double click's action on screens with no separate "previous" step |
-| **Long press** | Open message preview (Home) · Enter sub-level (Quick Send / Settings / Radio) · Send advert (Recent Advert page) · Toggle GPS (GPS page) |
+| **Long press** | Open message preview (Home) · Enter sub-level (Quick Send / Settings / Radio) · Open menu (Recent page) · Toggle GPS (GPS page) |
 
 > **Heltec E213 and E290 — second button (GPIO21):** Sends the same signal as triple-clicking the main button — previous item in a list or sub-level, or double click's action on screens with no separate "previous" step. The Wireless Paper has a single button only.
 
@@ -29,7 +29,7 @@ Single click cycles forward; double click and triple click both cycle backward.
 | **Quick Send** | Send a preset message over LoRa |
 | **Contacts** | List of known contacts for direct messaging |
 | **Saved Locations** | Preview of saved map locations |
-| **Recent Advert** | Last 4 nodes heard over LoRa |
+| **Recent** | Most recently heard nodes over LoRa, or found via Node Discovery |
 | **Radio** | LoRa radio parameters and noise floor |
 | **GPS** | GPS status and coordinates *(if GPS hardware present)* |
 | **Sensors** | Battery history chart, plus attached environment sensor readings *(if any)* |
@@ -543,22 +543,38 @@ If your node has no GPS fix, only the coordinates are shown.
 
 ---
 
-## Recent Advert page
+## Recent page
 
-Shows the last 4 nodes that advertised over LoRa, with time since last heard.
+Shows the most recently heard nodes — real adverts, and repeaters found by **Node Discovery**.
 
 ```
 ┌──────────────────────────────┐
-│ RECENT ADVERT     14:32 [==] │
+│ RECENT            14:32 [==] │
 │         · · · · • · ·        │
 │ Alien                    42s │
 │ Base Camp                 5m │
-│ Repeater-1               12m │
-│ Repeater-2                1h │
+│ Repeater-1          3.5>-2.0 │
+│ a1b2c3d4            1.0>-5.5 │
 └──────────────────────────────┘
 ```
 
-**Long press** — broadcast your own advert → alert "Advert sent!" or "Advert failed..". Handy when two people standing together want to pick each other up straight away. Also available as **Send Advert** in [Settings](#settings-page).
+A row from a real advert shows time since last heard. A row from Node Discovery shows SNR both ways instead — your signal as the repeater heard it, then its signal as you heard it. A repeater that answers but isn't a saved contact shows its public key prefix instead of a name.
+
+**Long press** opens a menu (active item highlights):
+
+- **Send Zero Hop Advert** — broadcast your own advert → alert "Advert sent!" or "Advert failed..". Handy when two people standing together want to pick each other up straight away.
+- **Node Discovery** — probe for nearby repeaters → alert "Discovering...". Answers appear on this page as they arrive.
+
+**In menu:**
+
+| Press | Action |
+|---|---|
+| Single click | Next item |
+| Double click | Exit menu |
+| Triple click | Previous item |
+| Long press | Activate item |
+
+Node Discovery only updates this list — it never adds a contact, even with **Auto-add Contacts** on in Settings.
 
 ---
 
@@ -734,7 +750,6 @@ Two views in one page — **Battery** is always first; long press cycles through
 | **Flip Screen** | Rotate display 180° |
 | **Font Weight** | Cycle font: `Thin` → `Bold`. *(E-ink displays only — E213, Wireless Paper, E290)* |
 | **Message Font** | Cycle message body size: `Normal` → `Large`. Applies to all displays (OLED, TFT, E-ink). |
-| **Send Advert** | Broadcast your presence → alert "Advert sent!" |
 | **Start OTA** | OTA update mode. On ESP32: connect to WiFi `MeshCore-OTA`, go to `192.168.4.1`. The page includes a firmware upload section and a **WiFi credentials form** to set the SSID/password for WiFi mode and optionally switch to it immediately. On nRF52 (T096 / RAK4631): enters BLE DFU mode — use the **nRF Device Firmware Update** app to upload the `.zip` package. |
 | **Shutdown** | Power off the device |
 | **About** | Show device name, firmware version and build date |
